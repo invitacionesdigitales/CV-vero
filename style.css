@@ -1,0 +1,283 @@
+.contact {
+    background-color: rgb(251, 246, 224);
+    color: rgb(98, 97, 97);
+    font-size: 15px;
+    border-radius: 14px;
+    padding: 20px;
+    display: grid;
+    gap: 25px;
+  }
+  
+  .contact p,
+  .contact h2,
+  .contact ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 25px;
+    color: gray;
+    font-family:'EB Garamond', serif;
+  }
+  
+  .contact-details,
+  .contact-form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .contact-details-group,
+  .contact-form-group {
+    display: grid;
+    gap: 3px;
+    color: rgb(69, 68, 68);
+  }
+  
+  .contact-label {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    border-radius: 7px;
+    border: none;
+    height: 30px;
+    padding: 5px 10px;
+  }
+  
+  .contact-form textarea {
+    height: auto;
+    resize: vertical;
+  }
+  
+  .contact-form-submit {
+    width: 100%;
+    height: 50px;
+  
+    background-color: var(--text-color);
+    border-radius: 7px;
+    color: var(--text-color-inverse);
+    border: 1px solid var(--theme-color);
+  
+    cursor: pointer;
+  }
+  
+  .contact-form-submit:hover {
+    box-shadow: 0 0 14px var(--secondary-color);
+  }
+  
+  .social-list {
+    list-style: none;
+  
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+  }
+  
+  .social-list img {
+    height: 25px;
+  }
+  
+  .social-list img:hover {
+    filter: drop-shadow(0 0 5px var(--secondary-color));
+  }
+  
+  @media (min-width: 950px) {
+    .contact {
+      font-size: 20px;
+      padding: 70px;
+  
+      max-width: 980px;
+      margin: 0 auto;
+  
+      box-sizing: border-box;
+    }
+  
+    .contact-title {
+      font-size: 35px;
+      text-align: left;
+    }
+  
+    .social-list {
+      justify-content: flex-start;
+    }
+  
+    .social-list img {
+      height: 35px;
+    }
+  
+    .contact-title {
+      grid-area: title;
+    }
+  
+    .contact-details {
+      grid-area: details;
+    }
+  
+    .contact-form {
+      grid-area: form;
+    }
+  
+    .social {
+      grid-area: social;
+    }
+  
+    .contact {
+      display: grid;
+      grid:
+        "title   form" auto
+        "details form" 1fr
+        "social  form" auto /
+        1fr      1fr;
+      align-items: start;
+    }
+  }
+
+
+  .experiences {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .experiences-body {
+    background-color: rgb(253, 249, 229);
+    color: rgb(37, 37, 36)
+  }
+  
+  .wave {
+    width: 100%;
+    position: relative;
+    top: 2px;
+  }
+  
+  .wave_bottom {
+    transform: scaleY(-1);
+    top: -2px;
+  }
+  
+  .experiences-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 25px;
+    color: gray;
+    font-family:'EB Garamond', serif;
+  }
+  
+  .experience-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(92, 90, 67)
+  }
+  
+  .experience-company {
+    font-size: 19px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    color: rgb(164, 113, 71);
+  }
+  
+  .experience-position {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .experience-description {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  
+  .experience {
+    padding: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 950px) {
+    .experiences-title {
+      font-size: 50px;
+      margin: 35px 0;
+      font-family:  'EB Garamond', serif;
+    }
+  
+    .experience-date {
+      font-size: 40px;
+    }
+  
+    .experience-company {
+      font-size: 25px;
+    }
+  
+    .experience-position {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  
+    .experience-description {
+      font-size: 20px;
+      margin-top: 10px;
+      line-height: 1.3;
+    }
+  
+    .experience {
+      padding: 0;
+    }
+  
+    .experience_left {
+      text-align: right;
+    }
+  
+    .experiences-grid {
+      display: grid;
+      grid-template-columns: auto 2px auto;
+      gap: 20px 70px;
+      padding: 70px;
+      justify-content: center;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+  
+    .line {
+      background-color: var(--text-color-inverse);
+      position: relative;
+    }
+  
+    .line::before,
+    .line::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: var(--text-color-inverse);
+      border-radius: 50%;
+  
+      position: absolute;
+      top: -20px;
+      left: -9px;
+    }
+  
+    .line::after {
+      top: 100%;
+      z-index: 1;
+    }
+   
+  }
+  .pdfview {
+    /* Centrado */
+    margin: auto;
+    display: block;
+    /* Tamaño */
+    width: 40%;
+    height: 40%;
+    /* Mejorar aspecto */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
